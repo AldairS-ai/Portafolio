@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='12' fill='white'/>
+      <text x='50' y='68' font-size='60' font-family='Arial, sans-serif' font-weight='700' text-anchor='middle' fill='%2300d4ff'>{}</text></svg>">
+    <title>Dev Aldair | Desarrollador frontend</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="tailwind.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="font-sans bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-200 transition-all duration-500">
+    <!-- Skip link para accesibilidad -->
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+
+    <!-- Header/Navbar -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white/90 dark:bg-gray-800/90 backdrop-blur-md shadow-sm transition-all duration-500">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <div class="w-10 h-10 rounded-full gradient-bg flex items-center justify-center transition-transform duration-300 hover:scale-110">
+                    <span class="text-white font-bold">{ }</span>
+                </div>
+                <span class="text-xl font-bold text-primary-700 dark:text-primary-400 transition-colors duration-300">Aldair Dev</span>
+            </div>
+            <nav class="hidden md:flex space-x-8" aria-label="Navegación principal">
+                <a href="#inicio" class="text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 font-medium transition-all duration-300 hover:scale-105">Inicio</a>
+                <a href="#sobre-mi" class="text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 font-medium transition-all duration-300 hover:scale-105">Sobre Mí</a>
+                <a href="#habilidades" class="text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 font-medium transition-all duration-300 hover:scale-105">Habilidades</a>
+                <a href="#proyectos" class="text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 font-medium transition-all duration-300 hover:scale-105">Proyectos</a>
+                <a href="#contacto" class="text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 font-medium transition-all duration-300 hover:scale-105">Contacto</a>
+            </nav>
+            <div class="flex items-center space-x-4">
+                <!-- Botón modo oscuro/claro -->
+                <button id="theme-toggle" class="text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-all duration-300 hover:scale-110 border-none outline-none focus:outline-none" aria-label="Cambiar modo claro/oscuro">
+                    <i class="fas fa-moon dark:hidden text-lg"></i>
+                    <i class="fas fa-sun hidden dark:block text-lg"></i>
+                </button>
+
+                <!-- Botón menú móvil -->
+                <button id="mobile-menu-toggle" class="md:hidden text-gray-600 dark:text-gray-300 transition-all duration-300 hover:scale-110 border-none outline-none focus:outline-none" aria-label="Abrir menú móvil">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+             </div>
+        </div>
+        
+        <!-- Menú móvil -->
+        <div id="mobile-menu" class="mobile-menu md:hidden absolute top-full left-0 w-full bg-white/95 dark:bg-gray-800/95 backdrop-blur-md shadow-lg py-4 px-4 hidden transition-all duration-500 transform">
+            <div class="flex flex-col space-y-4">
+                <a href="#inicio" class="text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 font-medium transition-all duration-300 py-3 px-4 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">Inicio</a>
+                <a href="#sobre-mi" class="text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 font-medium transition-all duration-300 py-3 px-4 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">Sobre Mí</a>
+                <a href="#habilidades" class="text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 font-medium transition-all duration-300 py-3 px-4 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">Habilidades</a>
+                <a href="#proyectos" class="text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 font-medium transition-all duration-300 py-3 px-4 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">Proyectos</a>
+                <a href="#contacto" class="text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 font-medium transition-all duration-300 py-3 px-4 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">Contacto</a>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content" class="pt-16">
+        <!-- Hero Section -->
+        <section id="inicio" class="gradient-bg text-white py-20 md:py-28 transition-all duration-1000">
+            <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 text-center md:text-left animate-fade-in">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-4 min-h-[60px] md:min-h-[72px]">
+                        <span id="typewriter-text" class="inline-block"></span>
+                        <span id="typewriter-cursor" class="inline-block w-1 h-12 bg-white ml-1 animate-pulse"></span>
+                    </h1>
+                    <p class="text-xl mb-6 opacity-90 transition-all duration-500">Especializado en crear interfaces modernas y experiencias de usuario excepcionales</p>
+                    
+                    <!-- Estado de disponibilidad -->
+                    <div class="flex items-center justify-center md:justify-start space-x-4 mt-6 mb-6 transition-all duration-500">
+                        <div class="flex items-center text-white/80">
+                            <div class="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></div>
+                            <span>Disponible para trabajar</span>
+                        </div>
+                    </div>
+                    
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center md:justify-start">
+                        <a href="#proyectos" class="bg-white text-primary-600 hover:bg-gray-100 font-medium py-3 px-6 rounded-lg transition-all duration-300 shadow-md btn-glow hover:scale-105">Ver Proyectos</a>
+                        <a href="#contacto" class="bg-transparent border-2 border-white hover:bg-white/10 font-medium py-3 px-6 rounded-lg transition-all duration-300 btn-glow hover:scale-105">Contactar</a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <div class="relative">
+                        <div class="w-64 h-64 md:w-80 md:h-80 rounded-full bg-white/10 flex items-center justify-center transition-all duration-500 hover:scale-105">
+                            <div class="w-56 h-56 md:w-72 md:h-72 rounded-full bg-white/20 flex items-center justify-center transition-all duration-500">
+                                <div class="w-48 h-48 md:w-60 md:h-60 rounded-full bg-white/30 flex items-center justify-center transition-all duration-500">
+                                    <i class="fas fa-laptop-code text-6xl md:text-7xl text-white transition-all duration-500"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absolute -bottom-4 -right-4 bg-primary-500 text-white py-2 px-4 rounded-lg shadow-lg transition-all duration-300 hover:scale-110">
+                            <span class="font-medium">+3 años de experiencia</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sobre Mí Section -->
+        <section id="sobre-mi" class="py-16 bg-white dark:bg-gray-800 transition-all duration-500">
+            <div class="container mx-auto px-4">
+                <div class="flex justify-center items-center mb-10">
+                    <h2 class="text-4xl font-bold mb-1 text-gradient-title text-transparent bg-clip-text text-center transition-all duration-500">Sobre Mí</h2>
+                </div>
+              
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="md:w-1/3 mb-8 md:mb-0 flex justify-center">
+                        <div class="w-48 h-48 rounded-full overflow-hidden border-4 border-primary-600 dark:border-primary-800 shadow-lg profile-image relative bg-gradient-to-br from-blue-100 to-purple-100 dark:from-blue-900 dark:to-purple-900 transition-all duration-500 hover:scale-105">
+                            <img src="foto.png" alt="Foto de perfil de Aldair Dev" 
+                                 class="w-full h-full object-cover lazy" 
+                                 data-src="img/foto.png"
+                                 onerror="this.style.display='none'">
+                        </div>
+                    </div>
+                    <div class="md:w-2/3 md:pl-12">
+                        <h3 class="text-2xl font-semibold text-primary-700 dark:text-primary-400 mb-4 transition-all duration-500">Hola, soy Desarrollador Frontend</h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-6 transition-all duration-500">Soy un desarrollador frontend apasionado por crear interfaces de usuario atractivas y funcionales. Me especializo en JavaScript, React y tecnologías modernas del ecosistema frontend. También tengo conocimientos en backend que me permiten comprender mejor el desarrollo full-stack y colaborar eficazmente en equipos multidisciplinarios.</p>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                            <div class="flex items-start transition-all duration-300 hover:scale-105">
+                                <div class="bg-primary-100 dark:bg-primary-900 p-2 rounded-lg mr-4 transition-all duration-300">
+                                    <i class="fas fa-user text-primary-600 dark:text-primary-400"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800 dark:text-gray-200">Nombre</h4>
+                                    <p class="text-gray-600 dark:text-gray-400">Aldair Sarmiento</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start transition-all duration-300 hover:scale-105">
+                                <div class="bg-primary-100 dark:bg-primary-900 p-2 rounded-lg mr-4 transition-all duration-300">
+                                    <i class="fas fa-envelope text-primary-600 dark:text-primary-400"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800 dark:text-gray-200">Email</h4>
+                                     <a class="text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors" href="mailto:aldairsarmiento157@gmail.com">aldairsarmiento157@gmail.com</a>
+                                </div>
+                            </div>
+                            <div class="flex items-start transition-all duration-300 hover:scale-105">
+                                <div class="bg-primary-100 dark:bg-primary-900 p-2 rounded-lg mr-4 transition-all duration-300">
+                                    <i class="fas fa-map-marker-alt text-primary-600 dark:text-primary-400"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800 dark:text-gray-200">Ubicación</h4>
+                                    <p class="text-gray-600 dark:text-gray-400">Valledupar, Colombia</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start transition-all duration-300 hover:scale-105">
+                                <div class="bg-primary-100 dark:bg-primary-900 p-2 rounded-lg mr-4 transition-all duration-300">
+                                    <i class="fas fa-briefcase text-primary-600 dark:text-primary-400"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800 dark:text-gray-200">Disponibilidad</h4>
+                                    <p class="text-gray-600 dark:text-gray-400">Disponible para proyectos</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <a href="cv.pdf" download class="bg-primary-100 font-medium py-3 px-6 rounded-lg inline-flex items-center text-primary-600 dark:text-primary-400 dark:bg-primary-900 hover:text-primary-800 dark:hover:text-primary-300 transition-all duration-300 btn-glow hover:scale-105" id="download-cv">
+                            <span>Descargar CV</span>
+                            <i class="fas fa-download ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Habilidades Section -->
+        <section id="habilidades" class="py-16 bg-gray-50 dark:bg-gray-900 transition-all duration-500">
+            <div class="container mx-auto px-4">
+                <div class="flex justify-center items-center mb-10">
+                    <h2 class="text-4xl font-bold mb-1 text-gradient-title text-transparent bg-clip-text text-center transition-all duration-500">Habilidades Técnicas</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Habilidades de Frontend -->
+                    <div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-md card-hover transition-all duration-500">
+                        <div class="flex items-center mb-6">
+                            <div class="w-12 h-12 rounded-lg bg-blue-100 dark:bg-blue-900 flex items-center justify-center mr-4 transition-all duration-300">
+                                <i class="fas fa-code text-blue-600 dark:text-blue-400 text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold dark:text-gray-200 transition-all duration-300">Frontend</h3>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="transition-all duration-300 hover:scale-105">
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-gray-700 dark:text-gray-300">HTML5 & CSS3</span>
+                                    <span class="text-gray-700 dark:text-gray-300">90%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+                                    <div class="bg-blue-600 h-2 rounded-full progress-bar" style="width: 90%"></div>
+                                </div>
+                            </div>
+                            <div class="transition-all duration-300 hover:scale-105">
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-gray-700 dark:text-gray-300">JavaScript</span>
+                                    <span class="text-gray-700 dark:text-gray-300">85%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+                                    <div class="bg-blue-600 h-2 rounded-full progress-bar" style="width: 85%"></div>
+                                </div>
+                            </div>
+                            <div class="transition-all duration-300 hover:scale-105">
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-gray-700 dark:text-gray-300">React</span>
+                                    <span class="text-gray-700 dark:text-gray-300">80%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+                                    <div class="bg-blue-600 h-2 rounded-full progress-bar" style="width: 80%"></div>
+                                </div>
+                            </div>
+                            <div class="transition-all duration-300 hover:scale-105">
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-gray-700 dark:text-gray-300">Bootstrap, Tailwind CSS</span>
+                                    <span class="text-gray-700 dark:text-gray-300">75%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+                                    <div class="bg-blue-600 h-2 rounded-full progress-bar" style="width: 75%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Habilidades de Backend -->
+                    <div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-md card-hover transition-all duration-500">
+                        <div class="flex items-center mb-6">
+                            <div class="w-12 h-12 rounded-lg bg-green-100 dark:bg-green-900 flex items-center justify-center mr-4 transition-all duration-300">
+                                <i class="fas fa-server text-green-600 dark:text-green-400 text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold dark:text-gray-200 transition-all duration-300">Backend</h3>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="transition-all duration-300 hover:scale-105">
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-gray-700 dark:text-gray-300">Python</span>
+                                    <span class="text-gray-700 dark:text-gray-300">75%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+                                    <div class="bg-green-600 h-2 rounded-full progress-bar" style="width: 75%"></div>
+                                </div>
+                            </div>
+                            <div class="transition-all duration-300 hover:scale-105">
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-gray-700 dark:text-gray-300">Flaks</span>
+                                    <span class="text-gray-700 dark:text-gray-300">65%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+                                    <div class="bg-green-600 h-2 rounded-full progress-bar" style="width: 65%"></div>
+                                </div>
+                            </div>
+                            <div class="transition-all duration-300 hover:scale-105">
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-gray-700 dark:text-gray-300">PHP</span>
+                                    <span class="text-gray-700 dark:text-gray-300">60%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+                                    <div class="bg-green-600 h-2 rounded-full progress-bar" style="width: 60%"></div>
+                                </div>
+                            </div>
+                            <div class="transition-all duration-300 hover:scale-105">
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-gray-700 dark:text-gray-300">MySQL</span>
+                                    <span class="text-gray-700 dark:text-gray-300">70%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+                                    <div class="bg-green-600 h-2 rounded-full progress-bar" style="width: 70%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Otras tecnologías -->
+                <div class="mt-12">
+                    <h3 class="text-xl font-semibold text-center mb-8 dark:text-gray-200 transition-all duration-500">Otras Tecnologías y Herramientas</h3>
+                    <div class="flex flex-wrap justify-center gap-4">
+                        <div class="bg-white dark:bg-gray-800 px-4 py-2 rounded-lg shadow-sm flex items-center transition-all duration-300 hover:scale-110 hover:shadow-md">
+                            <i class="fab fa-git-alt text-orange-500 mr-2"></i>
+                            <span class="dark:text-gray-300">Git</span>
+                        </div>                      
+                        <div class="bg-white dark:bg-gray-800 px-4 py-2 rounded-lg shadow-sm flex items-center transition-all duration-300 hover:scale-110 hover:shadow-md">
+                            <i class="fab fa-aws text-orange-400 mr-2"></i>
+                            <span class="dark:text-gray-300">AWS</span>
+                        </div>
+                        <div class="bg-white dark:bg-gray-800 px-4 py-2 rounded-lg shadow-sm flex items-center transition-all duration-300 hover:scale-110 hover:shadow-md">
+                            <i class="fas fa-terminal text-gray-600 dark:text-gray-400 mr-2"></i>
+                            <span class="dark:text-gray-300">Terminal</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Proyectos Section -->
+        <section id="proyectos" class="py-16 bg-white dark:bg-gray-800 transition-all duration-500">
+            <div class="container mx-auto px-4">
+                <div class="flex justify-center items-center mb-10">
+                    <h2 class="text-4xl font-bold mb-1 text-gradient-title text-transparent bg-clip-text text-center transition-all duration-500">Proyectos Destacados</h2>
+                </div>
+                
+                <!-- Carrusel de Proyectos -->
+                <div class="relative">
+                    <!-- Contenedor del carrusel -->
+                    <div id="projects-carousel" class="overflow-hidden relative">
+                        <div id="projects-track" class="flex transition-all duration-500 ease-in-out">
+                            <!-- Proyecto 1 -->
+                            <div class="carousel-slide flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-4">
+                                <div class="bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg card-hover border border-gray-100 dark:border-gray-600 transition-all duration-500 h-full">
+                                    <div class="h-48 bg-gradient-to-r from-blue-400 to-purple-500 relative">
+                                        <div class="absolute inset-0 bg-black/20 flex items-center justify-center">                                                                                    
+                                            <i class="fas fa-graduation-cap text-white text-4xl transition-all duration-300"></i>                                          
+                                        </div>
+                                    </div>
+                                    <div class="p-6">
+                                        <h3 class="text-xl font-semibold mb-2 dark:text-gray-200 transition-all duration-300">Infojis</h3>
+                                        <p class="text-gray-600 dark:text-gray-400 mb-4 transition-all duration-300">Sistema de gestión académica diseñado para optimizar los procesos administrativos y académicos de las instituciones educativas.</p>
+                                        <div class="flex flex-wrap gap-2 mb-4">
+                                            <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs px-2 py-1 rounded transition-all duration-300">Flask</span>
+                                            <span class="bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 text-xs px-2 py-1 rounded transition-all duration-300">HTML5</span>
+                                            <span class="bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200 text-xs px-2 py-1 rounded transition-all duration-300">MySQL</span>
+                                            <span class="bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 text-xs px-2 py-1 rounded transition-all duration-300">+ 5</span>                                          
+                                        </div>
+                                        <div class="flex space-x-4">
+                                            <a href="http://38.242.203.234/" class="text-primary-600 dark:text-primary-400 hover:text-primary-800 dark:hover:text-primary-300 font-medium flex items-center transition-all duration-300 hover:scale-105">
+                                                <i class="fas fa-external-link-alt mr-1"></i>
+                                                <span>Demo</span>
+                                            </a>
+                                            <a href="https://github.com/JhonatanMazo/infojis.git" class="text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-300 font-medium flex items-center transition-all duration-300 hover:scale-105">
+                                                <i class="fab fa-github mr-1"></i>
+                                                <span>Código</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Proyecto 2 -->
+                            <div class="carousel-slide flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-4">
+                                <div class="bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg card-hover border border-gray-100 dark:border-gray-600 transition-all duration-500 h-full">
+                                    <div class="h-48 bg-gradient-to-r from-green-400 to-blue-500 relative">
+                                        <div class="absolute inset-0 bg-black/20 flex items-center justify-center">                                          
+                                            <strong class="text-white text-4xl transition-all duration-300">N</strong>
+                                        </div>
+                                    </div>
+                                    <div class="p-6">
+                                        <h3 class="text-xl font-semibold mb-2 dark:text-gray-200 transition-all duration-300">Clon de Netflix</h3>
+                                        <p class="text-gray-600 dark:text-gray-400 mb-4 transition-all duration-300">Réplica funcional de Netflix con interfaz moderna y características avanzadas. Incluye: sliders interactivos, diseño completamente responsive y consumo de API de películas, etc.</p>
+                                        <div class="flex flex-wrap gap-2 mb-4">
+                                            <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs px-2 py-1 rounded transition-all duration-300">Flask</span>
+                                            <span class="bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 text-xs px-2 py-1 rounded transition-all duration-300">HTML5</span>
+                                            <span class="bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200 text-xs px-2 py-1 rounded transition-all duration-300">TMDB API</span>
+                                            <span class="bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 text-xs px-2 py-1 rounded transition-all duration-300">+ 4</span>                                          
+                                        </div>
+                                        <div class="flex space-x-4">
+                                            <a href="#" class="text-primary-600 dark:text-primary-400 hover:text-primary-800 dark:hover:text-primary-300 font-medium flex items-center transition-all duration-300 hover:scale-105">
+                                                <i class="fas fa-external-link-alt mr-1"></i>
+                                                <span>Demo</span>
+                                            </a>
+                                            <a href="#" class="text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-300 font-medium flex items-center transition-all duration-300 hover:scale-105">
+                                                <i class="fab fa-github mr-1"></i>
+                                                <span>Código</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Proyecto 3 -->
+                            <div class="carousel-slide flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-4">
+                                <div class="bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg card-hover border border-gray-100 dark:border-gray-600 transition-all duration-500 h-full">
+                                    <div class="h-48 bg-gradient-to-r from-purple-400 to-pink-500 relative">
+                                        <div class="absolute inset-0 bg-black/20 flex items-center justify-center">                                          
+                                            <i class="fas fa-tachometer-alt text-white text-4xl transition-all duration-300"></i>
+                                        </div>
+                                    </div>
+                                    <div class="p-6">
+                                        <h3 class="text-xl font-semibold mb-2 dark:text-gray-200 transition-all duration-300">Dashboard Administrativo</h3>
+                                        <p class="text-gray-600 dark:text-gray-400 mb-4 transition-all duration-300">Sistema de administración web con gestión completa de usuarios, dashboard analítico y interfaz moderna.</p>
+                                        <div class="flex flex-wrap gap-2 mb-4">
+                                            <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs px-2 py-1 rounded transition-all duration-300">HTML5</span>
+                                            <span class="bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 text-xs px-2 py-1 rounded transition-all duration-300">Bootstrap</span>
+                                            <span class="bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200 text-xs px-2 py-1 rounded transition-all duration-300">JavaScript</span>
+                                            <span class="bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 text-xs px-2 py-1 rounded transition-all duration-300">Chart.js</span>                                          
+                                        </div>
+                                        <div class="flex space-x-4">
+                                            <a href="#" class="text-primary-600 dark:text-primary-400 hover:text-primary-800 dark:hover:text-primary-300 font-medium flex items-center transition-all duration-300 hover:scale-105">
+                                                <i class="fas fa-external-link-alt mr-1"></i>
+                                                <span>Demo</span>
+                                            </a>
+                                            <a href="#" class="text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-300 font-medium flex items-center transition-all duration-300 hover:scale-105">
+                                                <i class="fab fa-github mr-1"></i>
+                                                <span>Código</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Proyecto 4 -->
+                            <div class="carousel-slide flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-4">
+                                <div class="bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg card-hover border border-gray-100 dark:border-gray-600 transition-all duration-500 h-full">
+                                    <div class="h-48 bg-gradient-to-r from-yellow-400 to-orange-500 relative">
+                                        <div class="absolute inset-0 bg-black/20 flex items-center justify-center">                                          
+                                            <i class="fas fa-tasks text-white text-4xl transition-all duration-300"></i>
+                                        </div>
+                                    </div>
+                                    <div class="p-6">
+                                        <h3 class="text-xl font-semibold mb-2 dark:text-gray-200 transition-all duration-300">Tablero Kanban Drag & Drop</h3>
+                                        <p class="text-gray-600 dark:text-gray-400 mb-4 transition-all duration-300">Gestor de tareas interactivo estilo Trello con funcionalidad completa de arrastrar y soltar. Características principales: creación/eliminación de tareas, drag & drop nativo, etc.</p>
+                                        <div class="flex flex-wrap gap-2 mb-4">
+                                            <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs px-2 py-1 rounded transition-all duration-300">HTML5</span>
+                                            <span class="bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 text-xs px-2 py-1 rounded transition-all duration-300">Bootstrap</span>
+                                            <span class="bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 text-xs px-2 py-1 rounded transition-all duration-300">JavaScript Vanilla </span>
+                                            <span class="bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200 text-xs px-2 py-1 rounded transition-all duration-300">LocalStorage</span>                                          
+                                        </div>
+                                        <div class="flex space-x-4">
+                                            <a href="#" class="text-primary-600 dark:text-primary-400 hover:text-primary-800 dark:hover:text-primary-300 font-medium flex items-center transition-all duration-300 hover:scale-105">
+                                                <i class="fas fa-external-link-alt mr-1"></i>
+                                                <span>Demo</span>
+                                            </a>
+                                            <a href="#" class="text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-300 font-medium flex items-center transition-all duration-300 hover:scale-105">
+                                                <i class="fab fa-github mr-1"></i>
+                                                <span>Código</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Controles del carrusel -->
+                    <button id="carousel-prev" class="carousel-control absolute left-0 top-1/2 transform -translate-y-1/2 bg-white dark:bg-gray-800 shadow-lg rounded-full w-10 h-10 flex items-center justify-center text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-all duration-300 z-10 hover:scale-110" aria-label="Proyecto anterior">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button id="carousel-next" class="carousel-control absolute right-0 top-1/2 transform -translate-y-1/2 bg-white dark:bg-gray-800 shadow-lg rounded-full w-10 h-10 flex items-center justify-center text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-all duration-300 z-10 hover:scale-110" aria-label="Siguiente proyecto">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                    
+                    <!-- Indicadores del carrusel -->
+                    <div id="carousel-indicators" class="flex justify-center mt-6 space-x-2">
+                        <!-- Los indicadores se generan dinámicamente con JavaScript -->
+                    </div>
+                </div>
+                
+                <div class="text-center mt-12">
+                    <a href="//github.com/AldairS-ai" class="inline-flex items-center text-primary-600 dark:text-primary-400 hover:text-primary-800 dark:hover:text-primary-300 font-medium text-lg transition-all duration-300 hover:scale-105">
+                        <span>Ver todos los proyectos</span>
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contacto Section -->
+        <section id="contacto" class="py-16 bg-white dark:bg-gray-800 transition-all duration-500">
+            <div class="container mx-auto px-4">
+                <div class="flex justify-center items-center">
+                    <h2 class="text-4xl font-bold mb-1 text-gradient-title text-transparent bg-clip-text transition-all duration-500">Contacto</h2>
+                </div>
+                <div class="flex justify-center items-center w-full">
+                    <p class="text-gray-600 text-center dark:text-gray-400 transition-all duration-500">¿Tienes un proyecto en mente? !Hablemos y hagámoslo realidad!</p>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-8">
+                    <!-- Formulario de contacto -->
+                    <div class="bg-white dark:bg-gray-800 rounded-xl p-8 shadow-md transition-all duration-500">
+                        <h3 class="text-xl font-bold dark:text-gray-200 mb-5 transition-all duration-500">Envíame un Mensaje</h3>
+                        <form id="contact-form" class="space-y-6" action="https://formspree.io/f/xyzlkkwd" method="POST">
+                            <div>
+                                <label for="nombre" class="block text-gray-700 dark:text-gray-300 mb-2 transition-all duration-500">Nombre completo</label>
+                                <input type="text" id="nombre" name="nombre" class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-200 transition-all duration-500" placeholder="Tu nombre" required>
+                            </div>
+                            
+                            <div>
+                                <label for="email" class="block text-gray-700 dark:text-gray-300 mb-2 transition-all duration-500">Email</label>
+                                <input type="email" id="email" name="email" class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-200 transition-all duration-500" placeholder="tu@email.com" required>
+                            </div>
+                            
+                            <div>
+                                <label for="asunto" class="block text-gray-700 dark:text-gray-300 mb-2 transition-all duration-500">Asunto</label>
+                                <input type="text" id="asunto" name="asunto" class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-200 transition-all duration-500" placeholder="Asunto del mensaje" required>
+                            </div>
+                            
+                            <div>
+                                <label for="mensaje" class="block text-gray-700 dark:text-gray-300 mb-2 transition-all duration-500">Mensaje</label>
+                                <textarea id="mensaje" name="mensaje" rows="5" class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-200 transition-all duration-500" placeholder="Escribe tu mensaje aquí..." required></textarea>
+                            </div>
+                            
+                            <button type="submit" id="submit-btn" class="w-full bg-primary-600 hover:bg-primary-700 text-white font-medium py-3 px-6 rounded-lg transition-all duration-300 shadow-md flex justify-center items-center btn-glow hover:scale-105">
+                                <span id="submit-text">Enviar Mensaje</span>
+                                <i id="submit-spinner" class="fas fa-spinner loading-spinner hidden ml-2"></i>
+                            </button>
+                        </form>
+                    </div>
+                    
+                    <!-- Información de contacto -->
+                    <div class="bg-gray-50 dark:bg-gray-900 rounded-xl p-8 shadow-md transition-all duration-500">
+                        <h3 class="text-xl font-bold dark:text-gray-200 mb-6 transition-all duration-500">Información de Contacto</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-start transition-all duration-300 hover:scale-105">
+                                <div class="bg-primary-100 dark:bg-primary-900 p-3 rounded-lg mr-4 transition-all duration-300">
+                                    <i class="fas fa-envelope text-primary-600 dark:text-primary-400"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800 dark:text-gray-200 mb-1">Email</h4>
+                                    <a href="mailto:aldairsarmiento157@gmail.com" class="text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-all duration-300">aldairsarmiento157@gmail.com</a>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start transition-all duration-300 hover:scale-105">
+                                <div class="bg-primary-100 dark:bg-primary-900 p-3 rounded-lg mr-4 transition-all duration-300">
+                                    <i class="fab fa-whatsapp text-primary-600 dark:text-primary-400"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800 dark:text-gray-200 mb-1">WhatsApp</h4>
+                                    <a href="https://wa.me/573118506905" class="text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-all duration-300">+57 311 850 6905</a>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start transition-all duration-300 hover:scale-105">
+                                <div class="bg-primary-100 dark:bg-primary-900 p-3 rounded-lg mr-4 transition-all duration-300">
+                                    <i class="fab fa-github text-primary-600 dark:text-primary-400"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800 dark:text-gray-200 mb-1">GitHub</h4>
+                                    <a href="//github.com/AldairS-ai" class="text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-all duration-300">github.com/AldairS-ai</a>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start transition-all duration-300 hover:scale-105">
+                                <div class="bg-primary-100 dark:bg-primary-900 p-3 rounded-lg mr-4 transition-all duration-300">
+                                    <i class="fas fa-map-marker-alt text-primary-600 dark:text-primary-400"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800 dark:text-gray-200 mb-1">Ubicación</h4>
+                                    <p class="text-gray-600 dark:text-gray-400">Valledupar, Colombia</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Redes sociales -->
+                        <div class="mt-8 pt-6 border-t border-gray-200 dark:border-gray-700">
+                            <h4 class="font-semibold text-gray-800 dark:text-gray-200 mb-4 transition-all duration-500">Sígueme en redes</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="w-10 h-10 bg-gray-200 dark:bg-gray-700 rounded-full flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-primary-600 hover:text-white transition-all duration-300 hover:scale-110">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                                <a href="//github.com/AldairS-ai" class="w-10 h-10 bg-gray-200 dark:bg-gray-700 rounded-full flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-primary-600 hover:text-white transition-all duration-300 hover:scale-110">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="https://wa.me/573118506905" class="w-10 h-10 bg-gray-200 dark:bg-gray-700 rounded-full flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-primary-600 hover:text-white transition-all duration-300 hover:scale-110">
+                                    <i class="fab fa-whatsapp"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-secondary-900 text-white py-8 transition-all duration-500">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <div class="flex items-center space-x-2">
+                        <div class="w-8 h-8 rounded-full gradient-bg flex items-center justify-center transition-all duration-300 hover:scale-110">
+                            <span class="text-white font-bold text-sm">{ }</span>
+                        </div>
+                        <span class="text-xl font-bold transition-all duration-300">Aldair Dev</span>
+                    </div>
+                    <p class="text-gray-400 mt-2 transition-all duration-300">Desarrollador Frontend</p>
+                </div>
+                
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition-all duration-300 hover:scale-110" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="//github.com/AldairS-ai" class="text-gray-400 hover:text-white transition-all duration-300 hover:scale-110" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://wa.me/573118506905" class="text-gray-400 hover:text-white transition-all duration-300 hover:scale-110" aria-label="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="mailto:aldairsarmiento157@gmail.com" class="text-gray-400 hover:text-white transition-all duration-300 hover:scale-110" aria-label="Email">
+                        <i class="fas fa-envelope"></i>                      
+                    </a>                  
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-6 text-center text-gray-400">
+                <p>&copy; <span id="current-year"></span> Aldair Dev. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botón de WhatsApp flotante -->
+    <a class="fixed bottom-[30px] right-[20px] w-[60px] h-[60px] rounded-full flex items-center justify-center text-[1.5rem] shadow-lg shadow-cyan-400/40 bg-green-600 text-white transition-all duration-300 hover:scale-110 z-40" 
+        href="https://wa.me/573118506905" aria-label="Contactar por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="main.js"></script>
+</body>
+</html>

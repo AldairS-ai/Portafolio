@@ -1,0 +1,701 @@
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes spin-slow {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* =============================
+   Estilos base y mejoras globales
+   ============================= */
+.gradient-bg {
+    background: linear-gradient(135deg, #0ea5e9 0%, #6366f1 100%);
+}
+
+.card-hover {
+    transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.section-title {
+    position: relative;
+    display: inline-block;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 60%;
+    height: 3px;
+    background: linear-gradient(90deg, #0ea5e9, #6366f1);
+    border-radius: 2px;
+}
+
+.text-gradient-title{
+    background-image: linear-gradient(to right, #0ea5e9, #d946ef);
+    -Webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent
+}
+
+.dark .section-title::after {
+    background: linear-gradient(90deg, #38bdf8, #818cf8);
+}
+
+.mobile-menu {
+    transition: all 0.3s ease;
+}
+
+.mobile-menu.hidden {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+}
+
+.mobile-menu:not(.hidden) {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.loading-spinner {
+    animation: spin-slow 1s linear infinite;
+}
+
+.alert {
+    transition: all 0.3s ease;
+}
+
+/* =============================
+   Mejoras de accesibilidad
+   ============================= */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 6px;
+    background: #000;
+    color: white;
+    padding: 8px 12px;
+    z-index: 1000;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: top 0.3s ease;
+}
+
+.skip-link:focus {
+    top: 6px;
+    outline: 2px solid #0ea5e9;
+    outline-offset: 2px;
+}
+
+/* Mejorar focus para todos los elementos interactivos */
+button:focus,
+a:focus,
+input:focus,
+textarea:focus {
+    outline: 2px solid #0ea5e9;
+    outline-offset: 2px;
+}
+
+/* =============================
+   Estados de carga mejorados
+   ============================= */
+.skeleton {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite;
+    border-radius: 6px;
+}
+
+.skeleton-text {
+    height: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.skeleton-title {
+    height: 2rem;
+    margin-bottom: 1rem;
+}
+
+@keyframes loading {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+
+/* =============================
+   Efectos de máquina de escribir
+   ============================= */
+.typewriter-container {
+    display: inline-block;
+    position: relative;
+}
+
+.typewriter-cursor {
+    display: inline-block;
+    background-color: currentColor;
+    margin-left: 2px;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+}
+
+/* =============================
+   Estilos para el carrusel
+   ============================= */
+.carousel-slide {
+    transition: transform 0.3s ease;
+}
+
+.carousel-control {
+    opacity: 0.8;
+}
+
+.carousel-control:hover {
+    opacity: 1;
+}
+
+.carousel-indicator {
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+/* Responsividad del carrusel */
+@media (max-width: 767px) {
+    .carousel-control {
+        width: 8px;
+        height: 8px;
+        padding: 12px;
+    }
+    
+    .carousel-control i {
+        font-size: 0.8rem;
+    }
+}
+
+/* Mejoras de animación para el carrusel */
+#projects-track {
+    will-change: transform;
+}
+
+.carousel-slide {
+    will-change: transform, opacity;
+}
+
+/* =============================
+   Estilos para modal de carga profesional
+   ============================= */
+.loading-spinner-professional {
+    position: relative;
+}
+
+.spinner-circle {
+    width: 100%;
+    height: 100%;
+    border: 3px solid transparent;
+    border-top: 3px solid #0ea5e9;
+    border-right: 3px solid #0ea5e9;
+    border-radius: 50%;
+    animation: spin-professional 1s linear infinite;
+}
+
+@keyframes spin-professional {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* =============================
+   Efectos de partículas para el hero
+   ============================= */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0) translateX(0) rotate(0deg);
+        opacity: 0.7;
+    }
+    25% {
+        transform: translateY(-20px) translateX(10px) rotate(90deg);
+        opacity: 1;
+    }
+    50% {
+        transform: translateY(-10px) translateX(20px) rotate(180deg);
+        opacity: 0.8;
+    }
+    75% {
+        transform: translateY(-15px) translateX(-10px) rotate(270deg);
+        opacity: 0.9;
+    }
+}
+
+.particle {
+    will-change: transform, opacity;
+}
+
+/* =============================
+   Transiciones globales mejoradas
+   ============================= */
+* {
+    transition-property: color, background-color, border-color, opacity, transform;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+}
+
+/* Transición de carga inicial */
+body:not(.loaded) * {
+    transition: none !important;
+}
+
+/* =============================
+   Efectos hover mejorados
+   ============================= */
+.card-hover {
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+}
+
+.card-hover::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+    transition: left 0.6s;
+}
+
+.card-hover:hover::before {
+    left: 100%;
+}
+
+.card-hover:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+/* =============================
+   Animaciones de texto
+   ============================= */
+.text-gradient-animate {
+    background: linear-gradient(-45deg, #0ea5e9, #6366f1, #d946ef, #0ea5e9);
+    background-size: 300% 300%;
+    animation: gradient-shift 3s ease infinite;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@keyframes gradient-shift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* =============================
+   Efectos de entrada escalonados
+   ============================= */
+.stagger-item {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.stagger-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* =============================
+   Mejoras en la barra de progreso
+   ============================= */
+.progress-bar {
+    transition: width 1.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.progress-bar::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+    animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+    0% { left: -100%; }
+    100% { left: 100%; }
+}
+
+/* =============================
+   Efectos de botón mejorados
+   ============================= */
+.btn-glow {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+
+.btn-glow::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s;
+}
+
+.btn-glow:hover::before {
+    left: 100%;
+}
+
+.btn-glow:hover {
+    box-shadow: 0 0 20px rgba(14, 165, 233, 0.4);
+    transform: translateY(-2px);
+}
+
+/* =============================
+   Efectos de imagen mejorados
+   ============================= */
+.profile-image {
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    filter: grayscale(0.2);
+}
+
+.profile-image:hover {
+    filter: grayscale(0);
+    transform: scale(1.05);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+/* =============================
+   Scrollbar personalizada
+   ============================= */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f5f9;
+}
+
+.dark ::-webkit-scrollbar-track {
+    background: #1e293b;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 4px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+    background: #475569;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+    background: #64748b;
+}
+
+/* =============================
+   Mejoras para móviles
+   ============================= */
+@media (max-width: 768px) {
+    .mobile-menu {
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        background: rgba(255, 255, 255, 0.95);
+    }
+    
+    .dark .mobile-menu {
+        background: rgba(31, 41, 55, 0.95);
+    }
+    
+    .carousel-control {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* =============================
+   Estilos para búsqueda de proyectos MEJORADO
+   ============================= */
+.project-item {
+    transition: all 0.3s ease;
+}
+
+.project-item.hidden {
+    display: none !important;
+}
+
+/* Estado de búsqueda activa */
+.search-active #projects-track {
+    flex-wrap: wrap;
+    justify-content: center;
+    transform: none !important;
+}
+
+.search-active .carousel-slide:not(.hidden) {
+    margin-bottom: 2rem;
+}
+
+/* =============================
+   Botón volver al inicio
+   ============================= */
+#back-to-top {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 40;
+}
+
+#back-to-top.visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+#back-to-top:hover {
+    transform: scale(1.1);
+}
+
+/* =============================
+   Mejoras de rendimiento
+   ============================= */
+.lazy {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.lazy.loaded {
+    opacity: 1;
+}
+
+/* =============================
+   Animaciones de entrada para elementos
+   ============================= */
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+}
+
+.fade-in-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* =============================
+   Efectos de gradiente animado para secciones
+   ============================= */
+.gradient-border {
+    position: relative;
+    background: linear-gradient(135deg, #0ea5e9, #6366f1, #d946ef);
+    padding: 2px;
+    border-radius: 12px;
+}
+
+.gradient-border > div {
+    background: white;
+    border-radius: 10px;
+    padding: 1.5rem;
+}
+
+.dark .gradient-border > div {
+    background: #1f2937;
+}
+
+/* =============================
+   Animaciones mejoradas
+   ============================= */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.animate-fade-in {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.animate-slide-left {
+    animation: slideInLeft 0.8s ease-out forwards;
+}
+
+.animate-slide-right {
+    animation: slideInRight 0.8s ease-out forwards;
+}
+
+/* =============================
+   Efectos de búsqueda mejorados
+   ============================= */
+#project-search:focus {
+    box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.1);
+}
+
+/* =============================
+   Mejoras de accesibilidad
+   ============================= */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* =============================
+   Estados de carga mejorados
+   ============================= */
+.loading-state {
+    position: relative;
+    overflow: hidden;
+}
+
+.loading-state::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: translateX(-100%);
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+    animation: shimmer 2s infinite;
+}
+
+/* =============================
+   Imagen de perfil por defecto
+   ============================= */
+.profile-image::before {
+    content: '👨‍💻';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4rem;
+    opacity: 0.3;
+    z-index: -1;
+}
+
+.profile-image img {
+    transition: all 0.5s ease;
+}
+
+.profile-image:hover img {
+    transform: scale(1.05);
+}
+
+/* =============================
+   Responsividad mejorada
+   ============================= */
+@media (max-width: 640px) {
+    .hero-title {
+        font-size: 2.5rem;
+        line-height: 1.2;
+    }
+    
+    .carousel-control {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .mobile-menu {
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+    }
+    
+    .search-active .carousel-slide:not(.hidden) {
+        width: 100% !important;
+    }
+}
+
+/* =============================
+   Mejoras de rendimiento
+   ============================= */
+.will-change {
+    will-change: transform, opacity;
+}
+
+/* =============================
+   Estados de interacción mejorados
+   ============================= */
+.btn-glow:active {
+    transform: translateY(0) scale(0.98);
+}
+
+.carousel-control:active {
+    transform: translateY(-50%) scale(0.95);
+}
+
+/* =============================
+   Corrección para imágenes que no cargan
+   ============================= */
+img.lazy:not([src]) {
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+}
+
+.dark img.lazy:not([src]) {
+    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+}
+
+
+
+/* Agregar esto en tu archivo styles.css */
+.toast-container {
+    z-index: 9999;
+}
+
+/* Asegurar que no haya superposición */
+.toast-container + .toast-container {
+    top: 6rem !important;
+}
