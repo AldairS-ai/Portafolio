@@ -8,9 +8,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     
     <!-- PRELOAD CRÍTICO - OPTIMIZADO -->
-    <link rel="preload" href="src/styles/tailwind.css" as="style" crossorigin>
-    <link rel="preload" href="src/styles/style.css" as="style" crossorigin>
-    <link rel="preload" href="public/img/foto_perfil.webp" as="image" type="image/webp" fetchpriority="high">
+    <link rel="preload" href="src/styles/tailwind.css?v=1.1.0" as="style" crossorigin>
+    <link rel="preload" href="src/styles/style.css?v=1.1.0" as="style" crossorigin>
+    <link rel="preload" href="public/img/foto_perfil.webp?v=1.1.0" as="image" type="image/webp" fetchpriority="high">
     
     <!-- PRE-CONEXIÓN A ORÍGENES EXTERNOS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -98,9 +98,9 @@
     <link rel="alternate" hreflang="x-default" href="https://aldairs-ai.github.io/Portafolio/">
     
     <!-- FAVICON -->
-    <link rel="icon" href="public/img/logo.ico">
-    <link rel="shortcut icon" href="public/img/logo.ico">
-    <link rel="apple-touch-icon" href="public/img/logo.ico">
+    <link rel="icon" href="public/img/logo.ico?v=1.1.0">
+    <link rel="shortcut icon" href="public/img/logo.ico?v=1.1.0">
+    <link rel="apple-touch-icon" href="public/img/logo.ico?v=1.1.0">
 
     <!-- TÍTULO OPTIMIZADO PARA SEO -->
     <title>Aldair Dev | Desarrollador Frontend Especializado en React, JavaScript y Accesibilidad Web</title>
@@ -114,8 +114,8 @@
         crossorigin="anonymous">
     
     <!-- PRELOAD FONT AWESOME CON FALLBACK -->
-    <link rel="preload" href="src/styles/fontawesome.min.css" as="style" crossorigin>
-    <link rel="stylesheet" href="src/styles/fontawesome.min.css" media="screen" crossorigin>
+    <link rel="preload" href="src/styles/fontawesome.min.css?v=1.1.0" as="style" crossorigin>
+    <link rel="stylesheet" href="src/styles/fontawesome.min.css?v=1.1.0" media="screen" crossorigin>
 
     <!-- TAILWIND LOCAL -->
     <link rel="stylesheet" href="src/styles/tailwind.css" media="screen" crossorigin>
@@ -526,7 +526,11 @@
                 background-color: #0056b3 !important;
             }
         }
-    </style>           
+    </style>      
+    <script>
+  const APP_VERSION = '1.1.0';
+  const BUILD_TIMESTAMP = '20241228';
+    </script>
 </head>
 <body class="font-sans bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-100 min-h-screen">  
     <!-- Skip link para accesibilidad -->
@@ -1243,9 +1247,9 @@
     </a>
     
   
-    <script src="src/scripts/main.js" defer></script>
-    <script src="src/scripts/carousel.js" defer></script>
-    <script src="src/scripts/form.js" defer></script>
+    <script src="src/scripts/main.js?v=1.1.0" defer></script>
+    <script src="src/scripts/carousel.js?v=1.1.0" defer></script>
+    <script src="src/scripts/form.js?v=1.1.0" defer></script>
     
     <!-- Legacy para navegadores sin soporte moderno -->
     <script nomodule src="src/scripts/app.js"></script>    
