@@ -1,0 +1,29 @@
+# _headers
+/*
+  Cache-Control: public, max-age=31536000, immutable
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+
+/*.css
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.js
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.webp
+/*.ico
+/*.woff2
+/*.woff
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.html
+  Cache-Control: public, max-age=3600, must-revalidate
+
+/public/img/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/src/styles/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/src/scripts/*
+  Cache-Control: public, max-age=31536000, immutable
