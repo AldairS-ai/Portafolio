@@ -1,0 +1,1229 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth" dir="ltr">
+<head>
+    <!-- METADATOS BÁSICOS -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- PRELOAD CRÍTICO -->
+    <link rel="preload" href="src/styles/tailwind.css" as="style" crossorigin>
+    <link rel="preload" href="src/styles/style.css" as="style" crossorigin>
+    <link rel="preload" href="public/img/foto_perfil.webp" as="image" type="image/webp" fetchpriority="high">
+    
+    <!-- PRE-CONEXIÓN A ORÍGENES EXTERNOS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="dns-prefetch" href="https://formspree.io">
+    <link rel="preconnect" href="https://formspree.io">    
+     
+    <!-- METADATOS SEO Y ACCESIBILIDAD -->
+    <meta name="theme-color" content="#0284c7" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#0c4a6e" media="(prefers-color-scheme: dark)">
+    <meta name="color-scheme" content="light dark">
+    
+    <!-- DESCRIPCIÓN CON PALABRAS CLAVE -->
+    <meta name="description" content="Portafolio profesional de Aldair Sarmiento - Desarrollador Frontend especializado en React, JavaScript y tecnologías web modernas. +3 años de experiencia creando interfaces accesibles y eficientes.">
+    <meta name="keywords" content="desarrollador frontend, React, JavaScript, TypeScript, portafolio, programador, Colombia, Valledupar, HTML5, CSS3, Tailwind CSS, accesibilidad web, WCAG 2.1, desarrollo web">
+    <meta name="author" content="Aldair De Jesús Sarmiento Ospino">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="language" content="Spanish">
+    <meta name="geo.region" content="CO-CES">
+    <meta name="geo.placename" content="Valledupar">
+    <meta name="geo.position" content="10.4631;-73.2532">
+    <meta name="ICBM" content="10.4631, -73.2532">
+    
+    <!-- METADATOS DE ACCESIBILIDAD AVANZADOS -->
+    <meta name="application-name" content="Aldair Dev">
+    <meta name="accessibility-status" content="WCAG 2.1 AA compliant">
+    <meta name="accessibility-control" content="fullKeyboardControl, fullMouseControl, fullTouchControl">
+    <meta name="accessibility-feature" content="highContrastMode, largeText, screenReaderOptimized, keyboardNavigation">
+    <meta name="accessibility-hazard" content="noFlashing, noMotionSimulation">
+    <meta name="accessibility-summary" content="Sitio web optimizado para accesibilidad con navegación por teclado, alto contraste y compatibilidad con lectores de pantalla">
+    
+    <!-- CACHE CONTROL -->
+    <meta http-equiv="Cache-Control" content="public, max-age=31536000, immutable">
+    
+    <!-- CONTENT SECURITY POLICY SEGURO -->
+    <meta http-equiv="Content-Security-Policy" 
+    content="
+    default-src 'self';
+    script-src 'self' 'unsafe-inline' https://polyfill.io;
+    style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com;
+    font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com;
+    img-src 'self' data: https: blob:;
+    connect-src 'self' https://formspree.io https://aldairs-ai.github.io;
+    frame-src 'none';
+    object-src 'none';
+    form-action 'self' https://formspree.io;
+    worker-src 'self';
+    base-uri 'self';
+    ">
+    
+    <!-- OPEN GRAPH -->
+    <meta property="og:title" content="Aldair Dev | Desarrollador Frontend Especializado en React y Accesibilidad Web">
+    <meta property="og:description" content="Portafolio profesional de Aldair Sarmiento - Desarrollador Frontend con +3 años de experiencia en React, JavaScript y creación de interfaces accesibles.">
+    <meta property="og:image" content="https://aldairs-ai.github.io/Portafolio/public/img/foto_perfil.webp">
+    <meta property="og:image:alt" content="Foto de perfil de Aldair Sarmiento, desarrollador frontend colombiano">
+    <meta property="og:image:width" content="300">
+    <meta property="og:image:height" content="300">
+    <meta property="og:image:type" content="image/webp">
+    <meta property="og:url" content="https://aldairs-ai.github.io/Portafolio/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Aldair Dev - Portafolio">
+    <meta property="og:locale" content="es_CO">
+    <meta property="og:locale:alternate" content="es_ES">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta property="og:updated_time" content="2024-12-28T00:00:00+00:00">
+    
+    <!-- TWITTER CARD -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Aldair Dev | Desarrollador Frontend Especializado en React">
+    <meta name="twitter:description" content="Portafolio profesional de Aldair - Desarrollador Frontend con experiencia en React, JavaScript y accesibilidad web">
+    <meta name="twitter:image" content="https://aldairs-ai.github.io/Portafolio/public/img/foto_perfil.webp">
+    <meta name="twitter:image:alt" content="Foto de perfil de Aldair Sarmiento, desarrollador frontend">
+    <meta name="twitter:creator" content="@AldairS_ai">
+    <meta name="twitter:site" content="@AldairS_ai">
+    <meta name="twitter:label1" content="Especialización">
+    <meta name="twitter:data1" content="React & JavaScript">
+    <meta name="twitter:label2" content="Experiencia">
+    <meta name="twitter:data2" content="+3 años">
+    
+    <!-- CANONICAL Y ALTERNATE LINKS -->
+    <link rel="canonical" href="https://aldairs-ai.github.io/Portafolio/">
+    <link rel="alternate" hreflang="es" href="https://aldairs-ai.github.io/Portafolio/">
+    <link rel="alternate" hreflang="es-CO" href="https://aldairs-ai.github.io/Portafolio/">
+    <link rel="alternate" hreflang="en" href="https://aldairs-ai.github.io/Portafolio/en/">
+    <link rel="alternate" hreflang="x-default" href="https://aldairs-ai.github.io/Portafolio/">
+    
+    <!-- FAVICON -->
+    <link rel="icon" href="public/img/logo.ico">
+    <link rel="shortcut icon" href="public/img/logo.ico">
+    <link rel="apple-touch-icon" href="public/img/logo.ico">
+
+    <!-- TÍTULO OPTIMIZADO PARA SEO -->
+    <title>Aldair Dev | Desarrollador Frontend Especializado en React, JavaScript y Accesibilidad Web</title>
+    
+    <!-- GOOGLE FONTS OPTIMIZADO -->
+    <link rel="stylesheet"       
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap&display=optional"
+        media="print"          
+        onload="this.media='all'; this.onload=null;"          
+        fetchpriority="low"
+        crossorigin="anonymous">
+    
+    <!-- PRELOAD FONT AWESOME CON FALLBACK -->
+    <link rel="preload" href="src/styles/fontawesome.min.css" as="style" crossorigin>
+    <link rel="stylesheet" href="src/styles/fontawesome.min.css" media="screen" crossorigin>
+
+    <!-- TAILWIND LOCAL -->
+    <link rel="stylesheet" href="src/styles/tailwind.css" media="screen" crossorigin>
+    
+    <!-- ESTILOS PERSONALIZADOS -->
+    <link rel="stylesheet" href="src/styles/style.css" media="screen" crossorigin>
+    
+    <!-- NOSCRIPT FALLBACKS -->
+    <noscript>
+        <style>
+            /* Estilos básicos sin JavaScript */
+            html:not(.js-loaded) * {
+                animation: none !important;
+                transition: none !important;
+            }
+            
+            html:not(.js-loaded) .mobile-menu {
+                display: none;
+            }
+            
+            html:not(.js-loaded) .skip-link:focus {
+                top: 0.5rem;
+                left: 0.5rem;
+            }
+            
+            html:not(.js-loaded) .carousel-control {
+                display: none;
+            }
+            
+            html:not(.js-loaded) #theme-toggle {
+                display: none;
+            }
+            
+            /* Mostrar contenido crítico sin JS */
+            html:not(.js-loaded) .typewriter-fallback {
+                display: block !important;
+            }
+            
+            html:not(.js-loaded) #typewriter-text {
+                display: none;
+            }
+        </style>
+        <!-- Fallback para Font Awesome -->
+        <link rel="stylesheet" href="src/styles/css/fontawesome.min.css">
+
+        <!-- Fallback para Google Fonts -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+    </noscript>
+    
+    <!-- SCRIPT DE INICIALIZACIÓN CRÍTICO OPTIMIZADO -->
+    <script>
+    // ===== DETECCIÓN INMEDIATA DE TEMA Y PREFERENCIAS =====
+    (function(){
+        'use strict';
+        
+        // Ocultar contenido hasta que JavaScript esté listo (prevenir FOUC)
+        document.documentElement.style.visibility = 'hidden';
+        document.documentElement.style.opacity = '0';
+        
+        // Referencias rápidas
+        const html = document.documentElement;
+        
+        // Detectar preferencias del usuario
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches;
+        
+        // Aplicar tema guardado o preferencia del sistema
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+            html.classList.add('dark');
+        } else if (savedTheme === 'light') {
+            html.classList.remove('dark');
+        }
+        
+        // Aplicar preferencias de accesibilidad
+        if (prefersReducedMotion) {
+            html.classList.add('reduce-motion');
+        }
+        
+        if (prefersHighContrast) {
+            html.classList.add('high-contrast');
+        }
+        
+        // Marcar JavaScript como cargado
+        html.classList.add('js-loaded');
+        
+        // Función para mostrar contenido
+        function showContent() {
+            requestAnimationFrame(() => {
+                html.style.visibility = 'visible';
+                html.style.opacity = '1';
+                html.style.transition = 'opacity 0.3s ease';
+            });
+        }
+        
+        // Mostrar contenido cuando el DOM esté listo
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', showContent);
+        } else {
+            showContent();
+        }
+        
+        // Fallback en caso de timeout
+        setTimeout(showContent, 1000);
+        
+        // Función global para cambiar tema
+        window.toggleTheme = function() {
+            const isDark = html.classList.toggle('dark');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            
+            // Anunciar cambio para accesibilidad
+            const announcement = document.getElementById('theme-announcement');
+            if (announcement) {
+                announcement.textContent = 'Modo ' + (isDark ? 'oscuro' : 'claro') + ' activado';
+            }
+            
+            return isDark;
+        };
+        
+        // Smooth scroll optimizado
+        window.smoothScroll = function(targetId) {
+            const target = document.getElementById(targetId);
+            if (target) {
+                const header = document.querySelector('header');
+                const headerHeight = header ? header.offsetHeight : 80;
+                const targetPosition = target.offsetTop - headerHeight;
+                
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: prefersReducedMotion ? 'auto' : 'smooth'
+                });
+                
+                // Enfocar objetivo para accesibilidad
+                setTimeout(() => {
+                    target.setAttribute('tabindex', '-1');
+                    target.focus();
+                    setTimeout(() => target.removeAttribute('tabindex'), 1000);
+                }, prefersReducedMotion ? 0 : 500);
+            }
+        };
+        
+        // Detectar características del navegador para módulos
+        window.browserSupportsModules = 'noModule' in HTMLScriptElement.prototype;
+        
+        // Prevenir múltiples ejecuciones
+        window.__PORTFOLIO_INITIALIZED__ = true;
+        
+    })();
+    
+    // ===== POLYFILL PARA FOCUS-VISIBLE =====
+    (function() {
+        if (!CSS.supports('selector(:focus-visible)')) {
+            document.addEventListener('keydown', function() {
+                document.documentElement.classList.add('keyboard-navigation');
+            });
+            
+            document.addEventListener('mousedown', function() {
+                document.documentElement.classList.remove('keyboard-navigation');
+            });
+        }
+    })();
+    </script>
+    
+    <!-- STRUCTURED DATA -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Person",
+                "@id": "https://aldairs-ai.github.io/Portafolio/#person",
+                "name": "Aldair De Jesús Sarmiento Ospino",
+                "url": "https://aldairs-ai.github.io/Portafolio/",
+                "jobTitle": "Desarrollador Frontend Especialista en Accesibilidad",
+                "description": "Desarrollador Frontend especializado en React, JavaScript y tecnologías modernas web, con enfoque en accesibilidad y mejores prácticas.",
+                "email": "mailto:aldairsarmiento157@gmail.com",
+                "telephone": "+57 311 850 6905",
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "Valledupar",
+                    "addressRegion": "Cesar",
+                    "addressCountry": "CO",
+                    "postalCode": "200001"
+                },
+                "sameAs": [
+                    "https://github.com/AldairS-ai",
+                    "https://linkedin.com/in/aldairsarmiento",
+                    "https://twitter.com/AldairS_ai"
+                ],
+                "knowsAbout": [
+                    "Frontend Development",
+                    "React.js",
+                    "JavaScript ES6+",
+                    "TypeScript",
+                    "Web Accessibility (WCAG)",
+                    "Responsive Web Design",
+                    "Tailwind CSS",
+                    "Git & GitHub",
+                    "REST APIs",
+                    "Performance Optimization"
+                ],
+                "knowsLanguage": ["Spanish", "English"],
+                "hasOccupation": {
+                    "@type": "Occupation",
+                    "name": "Desarrollador Frontend",
+                    "estimatedSalary": {
+                        "@type": "MonetaryAmount",
+                        "currency": "COP",
+                        "value": {
+                            "@type": "QuantitativeValue",
+                            "minValue": 3000000,
+                            "maxValue": 6000000
+                        }
+                    }
+                },
+                "alumniOf": {
+                    "@type": "EducationalOrganization",
+                    "name": "Platzi",
+                    "url": "https://platzi.com"
+                },
+                "image": "https://aldairs-ai.github.io/Portafolio/img/foto_perfil.webp",
+                "gender": "Male",
+                "nationality": {
+                    "@type": "Country",
+                    "name": "Colombia"
+                }
+            },
+            {
+                "@type": "WebSite",
+                "@id": "https://aldairs-ai.github.io/Portafolio/#website",
+                "name": "Portafolio Aldair Dev",
+                "description": "Portafolio profesional de desarrollador frontend con foco en accesibilidad web, React y JavaScript",
+                "url": "https://aldairs-ai.github.io/Portafolio/",
+                "author": {
+                    "@id": "https://aldairs-ai.github.io/Portafolio/#person"
+                },
+                "publisher": {
+                    "@id": "https://aldairs-ai.github.io/Portafolio/#person"
+                },
+                "inLanguage": "es-CO",
+                "accessibilityFeature": [
+                    "alternativeText",
+                    "ariaLiveRegion",
+                    "contrastEnhancement",
+                    "keyboardNavigation",
+                    "screenReaderOptimized",
+                    "skipNavigation",
+                    "tableOfContents",
+                    "describedBy",
+                    "labelledBy"
+                ],
+                "accessibilityHazard": "none",
+                "accessibilitySummary": "Este sitio cumple con los estándares WCAG 2.1 AA para accesibilidad web, incluyendo navegación por teclado, alto contraste y compatibilidad con lectores de pantalla",
+                "accessMode": ["visual", "textual", "auditory"],
+                "accessModeSufficient": ["textual", "visual"],
+                "accessibilityAPI": ["ARIA"],
+                "accessibilityControl": ["fullKeyboardControl", "fullMouseControl", "fullTouchControl"]
+            },
+            {
+                "@type": "Organization",
+                "name": "Aldair Dev",
+                "url": "https://aldairs-ai.github.io/Portafolio/",
+                "logo": "https://aldairs-ai.github.io/Portafolio/public/img/logo.ico",
+                "sameAs": [
+                    "https://github.com/AldairS-ai",
+                    "https://linkedin.com/in/aldairsarmiento"
+                ]
+            },
+            {
+                "@type": "ContactPage",
+                "@id": "https://aldairs-ai.github.io/Portafolio/#contact",
+                "name": "Contacto - Portafolio Aldair Dev",
+                "description": "Formulario de contacto para proyectos de desarrollo frontend y consultas profesionales",
+                "url": "https://aldairs-ai.github.io/Portafolio/#contacto",
+                "author": {
+                    "@id": "https://aldairs-ai.github.io/Portafolio/#person"
+                },
+                "mainEntityOfPage": {
+                    "@id": "https://aldairs-ai.github.io/Portafolio/#website"
+                }
+            },
+            {
+                "@type": "BreadcrumbList",
+                "@id": "https://aldairs-ai.github.io/Portafolio/#breadcrumb",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Inicio",
+                        "item": "https://aldairs-ai.github.io/Portafolio/#inicio"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Sobre Mí",
+                        "item": "https://aldairs-ai.github.io/Portafolio/#sobre-mi"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "Habilidades",
+                        "item": "https://aldairs-ai.github.io/Portafolio/#habilidades"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 4,
+                        "name": "Proyectos",
+                        "item": "https://aldairs-ai.github.io/Portafolio/#proyectos"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 5,
+                        "name": "Contacto",
+                        "item": "https://aldairs-ai.github.io/Portafolio/#contacto"
+                    }
+                ]
+            }
+        ]
+    }
+    </script>
+    
+    <!-- ESTILOS CRÍTICOS INLINE PARA MEJORAR LCP -->
+    <style>    
+        /* Prevenir FOUC */
+        html:not(.js-loaded) {
+            visibility: hidden;
+            opacity: 0;
+        }
+        
+        .gradient-bg {         
+            background: linear-gradient(135deg, #0284c7 0%, #0c4a6e 100%);              
+            position: relative;        
+            min-height: 100dvh;
+            align-content: center;         
+        }
+                
+        /* Tipografía crítica */
+        .font-sans {
+            font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+        }
+                    
+        /* Skip link accesible */
+        .skip-link {
+            position: absolute;
+            top: -100px;
+            left: 0;
+            background: #0284c7;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            z-index: 9999;
+            text-decoration: none;
+        }
+                
+        .skip-link:focus {
+            top: 0.5rem;
+            left: 0.5rem;
+        }
+                
+        /* Animaciones básicas */
+        @keyframes loading {
+            0% { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
+        }
+        
+        /* Estilos para carga progresiva */
+        .progress-bar {
+            transition: width 1s ease-in-out;
+        }
+        
+        .progress-bar.animated {
+            animation: fillProgress 1.5s ease-out forwards;
+        }
+        
+        @keyframes fillProgress {
+            from { width: 0%; }
+            to { width: var(--target-width, 100%); }
+        }
+        
+        /* Estilos para reduce-motion */
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+            
+            .progress-bar {
+                transition: none !important;
+                animation: none !important;
+            }
+        }
+        
+        /* Estilos para high-contrast */
+        @media (prefers-contrast: high) {
+            .gradient-bg {
+                background: #0c4a6e !important;
+            }
+            
+            .text-primary-600 {
+                color: #0056b3 !important;
+            }
+            
+            .bg-primary-600 {
+                background-color: #0056b3 !important;
+            }
+        }
+    </style>           
+</head>
+<body class="font-sans bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-100 min-h-screen">  
+    <!-- Skip link para accesibilidad -->
+    <a href="#main-content" class="skip-link focus:top-0" aria-label="Saltar al contenido principal">Saltar al contenido</a>
+    
+    <!-- Header/Navbar -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white/90 dark:bg-gray-800/90 backdrop-blur-md shadow-sm" role="banner" aria-label="Cabecera principal">          
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <div class="w-10 h-10 rounded-full bg-primary-600 flex items-center justify-center transition-transform duration-300 hover:scale-110 focus:scale-110" aria-hidden="true">
+                    <i class="icon-code text-white font-bold text-xl" aria-hidden="true"></i>                  
+                </div>
+                <span class="text-xl font-bold text-primary-600 dark:text-primary-400">Aldair Dev</span>
+            </div>
+            
+            <nav class="hidden md:flex space-x-8" aria-label="Navegación principal">
+                <a href="#inicio" class="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 font-medium transition-colors duration-300 px-3 py-2 rounded hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-primary-500" aria-current="page">Inicio</a>
+                <a href="#sobre-mi" class="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 font-medium transition-colors duration-300 px-3 py-2 rounded hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-primary-500">Sobre Mí</a>
+                <a href="#habilidades" class="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 font-medium transition-colors duration-300 px-3 py-2 rounded hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-primary-500">Habilidades</a>
+                <a href="#proyectos" class="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 font-medium transition-colors duration-300 px-3 py-2 rounded hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-primary-500">Proyectos</a>
+                <a href="#contacto" class="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 font-medium transition-colors duration-300 px-3 py-2 rounded hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-primary-500">Contacto</a>
+            </nav>
+            
+            <div class="flex items-center space-x-4">
+                <!-- Botón modo oscuro/claro -->
+                <button id="theme-toggle-lg" 
+                        class="bg-transparent w-10 h-10 hidden md:flex items-center justify-center text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-all duration-300 hover:scale-110 border-none outline-none focus:outline-none focus:ring-2 focus:ring-primary-500 rounded-full"
+                        aria-label="Cambiar modo claro/oscuro"
+                        aria-pressed="false">
+                    <i class="icon-moon dark:hidden text-lg" aria-hidden="true"></i>
+                    <i class="icon-sun  dark:block text-lg" aria-hidden="true"></i>
+                </button>
+                
+                <!-- Botón menú móvil -->                
+                <button id="mobile-menu-toggle"
+                    class="bg-transparent md:hidden w-10 h-10 flex items-center justify-center text-gray-600 dark:text-gray-300 transition-all duration-300 hover:scale-110 border-none outline-none focus:outline-none focus:ring-2 focus:ring-primary-500 rounded-full"                    
+                    aria-label="Abrir menú móvil"                    
+                    aria-expanded="false"                    
+                    aria-controls="mobile-menu"                                          
+                    aria-haspopup="true">                    
+                    <i class="icon-menu text-lg" aria-hidden="true"></i>                    
+                </button>
+            </div>
+        </div>
+        
+        <!-- Menú móvil -->
+        <div id="mobile-menu" 
+             class="mobile-menu md:hidden absolute top-full left-0 w-full bg-white/95 dark:bg-gray-800/95 backdrop-blur-md shadow-lg py-4 px-4 hidden transition-all duration-500 transform"
+             role="navigation"
+             aria-label="Navegación móvil">
+            <div class="flex flex-col space-y-2">
+                <a href="#inicio" class="text-center text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 font-medium transition-all duration-300 py-3 px-4 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-primary-500">Inicio</a>
+                <a href="#sobre-mi" class="text-center text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 font-medium transition-all duration-300 py-3 px-4 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-primary-500">Sobre Mí</a>
+                <a href="#habilidades" class="text-center text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 font-medium transition-all duration-300 py-3 px-4 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-primary-500">Habilidades</a>
+                <a href="#proyectos" class="text-center text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 font-medium transition-all duration-300 py-3 px-4 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-primary-500">Proyectos</a>
+                <a href="#contacto" class="text-center text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 font-medium transition-all duration-300 py-3 px-4 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-primary-500">Contacto</a>
+                <!-- Botón modo oscuro/claro - SOLO EN MENÚ MÓVIL -->
+                <button id="theme-toggle-mobile" 
+                        class="flex items-center justify-center w-full text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 font-medium transition-all duration-300 py-3 px-4 rounded-lg bg-transparent hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-primary-500"
+                        aria-label="Cambiar modo claro/oscuro"
+                        aria-pressed="false">                  
+                    <i class="icon-moon dark:hidden ml-2" aria-hidden="true"></i>
+                    <i class="icon-sun hidden dark:block ml-2" aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+    
+    <main id="main-content" class="pt-16" role="main" aria-label="Contenido principal">    
+        <!-- Hero Section -->
+        <section id="inicio" class="gradient-bg text-white py-16 md:py-24" aria-labelledby="hero-title">
+            <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 text-center md:text-left">
+                    <h1 id="hero-title" class="text-3xl md:text-4xl font-bold mb-4 min-h-[60px] md:min-h-[72px]">
+                        <span id="typewriter-text" class="inline-block" aria-live="polite"></span>
+                        <span id="typewriter-cursor" class="inline-block w-1 h-8 md:h-12 bg-white ml-1 animate-pulse" aria-hidden="true"></span>
+                    </h1>
+                    <p class="text-lg md:text-xl mb-6 opacity-90">Especializado en crear interfaces modernas y experiencias de usuario excepcionales</p>
+                    
+                    <div class="flex items-center justify-center md:justify-start space-x-4 mb-6">  
+                        <div class="flex items-center text-white/80" aria-label="Disponible para trabajar">                                                          
+                            <div class="w-2 h-2 bg-green-600 rounded-full mr-2 animate-pulse" aria-hidden="true"></div>                                                          
+                            <span class="font-medium">Disponible para trabajar</span>                              
+                        </div>  
+                    </div>              
+                    
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                        <a href="#proyectos" 
+                           class="bg-white text-primary-700 hover:bg-gray-100 font-medium py-3 px-6 rounded-lg transition-all duration-300 shadow-md focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-primary-600 min-h-[44px] min-w-[120px] flex items-center justify-center"
+                           aria-label="Ver proyectos destacados">
+                            Ver Proyectos
+                        </a>
+                        <a href="#contacto" 
+                           class="bg-transparent border-2 border-white text-white hover:bg-white/10 font-medium py-3 px-6 rounded-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-primary-600 min-h-[44px] min-w-[120px] flex items-center justify-center"
+                           aria-label="Contactar con Aldair">
+                            Contactar
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2 flex justify-center">
+                    <div class="relative">
+                        <div class="w-64 h-64 md:w-72 md:h-72 rounded-full bg-white/10 flex items-center justify-center" aria-hidden="true">
+                            <div class="profile-image w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden border-4 border-white/30 shadow-xl">                                
+                                <img src="public/img/foto_perfil.webp" 
+                                    alt="Foto de perfil de Aldair Sarmiento, desarrollador frontend con experiencia en React y JavaScript"                                    
+                                    width="300" height="300" loading="lazy" class="w-full h-full object-cover"                                    
+                                    onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">                                
+                                <div class="w-full h-full bg-gradient-to-br from-blue-100 to-purple-100 dark:from-blue-900 dark:to-purple-900 flex items-center justify-center hidden" style="display: none;">
+                                    <i class="icon-user text-4xl text-primary-600 dark:text-primary-400" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absolute -bottom-4 -right-4 bg-primary-600 text-white py-2 px-4 rounded-lg shadow-lg" aria-hidden="true">
+                            <span class="font-medium">+3 años de experiencia</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sobre Mí Section -->
+        <section id="sobre-mi" class="py-16 bg-white dark:bg-gray-800" aria-labelledby="sobre-mi-title">
+            <div class="container mx-auto px-4">
+                <h2 id="sobre-mi-title" class="text-3xl md:text-4xl font-bold text-center mb-12 text-primary-700 dark:text-primary-400">Sobre Mí</h2>
+              
+                <div class="flex flex-col md:flex-row items-center gap-8">
+                    <div class="md:w-1/3 flex justify-center">
+                        <div class="w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden border-4 border-primary-600 dark:border-primary-400 shadow-lg" aria-hidden="true">
+                            <img src="public/img/foto_perfil.webp"                                 
+                                alt="Foto de perfil de Aldair Sarmiento, desarrollador frontend con experiencia en React y JavaScript"                                    
+                                width="300" height="300" loading="lazy" class="w-full h-full object-cover"                                    
+                                onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">                            
+                        </div>
+                    </div>
+                    
+                    <div class="md:w-2/3">
+                        <h3 class="text-2xl font-semibold text-primary-700 dark:text-primary-400 mb-4">Hola, soy Desarrollador Frontend</h3>
+                        <p class="text-gray-700 dark:text-gray-300 mb-6">Soy un desarrollador frontend apasionado por crear interfaces de usuario atractivas y funcionales. Me especializo en JavaScript, React y tecnologías modernas del ecosistema frontend. Tengo conocimientos en backend que me permiten comprender mejor el desarrollo full-stack y colaborar eficazmente en equipos multidisciplinarios.</p>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-2 mb-8">
+                            <div class="flex items-start p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                                <div class="bg-primary-100 dark:bg-primary-900 p-2 rounded-lg mr-4">
+                                    <i class="icon-user text-primary-600 dark:text-primary-400" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800 dark:text-gray-200">Nombre</h4>
+                                    <p class="text-gray-700 dark:text-gray-300">Aldair Sarmiento</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                                <div class="bg-primary-100 dark:bg-primary-900 p-2 rounded-lg mr-4">
+                                    <i class="icon-mail text-primary-600 dark:text-primary-400" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800 dark:text-gray-200">Email</h4>
+                                    <a href="mailto:aldairsarmiento157@gmail.com" class="text-primary-600 dark:text-primary-400 hover:underline">aldairsarmiento@gmail.com</a>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                                <div class="bg-primary-100 dark:bg-primary-900 p-2 rounded-lg mr-4">
+                                    <i class="icon-location text-primary-600 dark:text-primary-400" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800 dark:text-gray-200">Ubicación</h4>
+                                    <p class="text-gray-700 dark:text-gray-300">Valledupar, Colombia</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                                <div class="bg-primary-100 dark:bg-primary-900 p-2 rounded-lg mr-4">
+                                    <i class="icon-briefcase text-primary-600 dark:text-primary-400" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800 dark:text-gray-200">Disponibilidad</h4>
+                                    <p class="text-gray-700 dark:text-gray-300">Disponible para proyectos</p>
+                                </div>
+                            </div>
+                        </div>                      
+                        <a href="public/docs/cv.pdf" 
+                           id="download-cv"                          
+                           download                           
+                           class="inline-flex items-center bg-primary-600 text-white font-medium py-3 px-6 rounded-lg hover:bg-primary-700 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 min-h-[44px] downloading-cv-btn"                          
+                           aria-label="Descargar currículum de Aldair Sarmiento">                          
+                           <span id="download-cv-text">Descargar CV</span>    
+                           <i class="icon-download ml-2" aria-hidden="true"></i>                          
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Habilidades Section -->
+        <section id="habilidades" class="py-16 bg-gray-50 dark:bg-gray-900" aria-labelledby="habilidades-title">
+            <div class="container mx-auto px-4">
+                <h2 id="habilidades-title" class="text-3xl md:text-4xl font-bold text-center mb-12 text-primary-700 dark:text-primary-400">Habilidades Técnicas</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Habilidades de Frontend -->
+                    <div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-md">
+                        <div class="flex items-center mb-6">
+                            <div class="w-12 h-12 rounded-lg bg-blue-100 dark:bg-blue-900 flex items-center justify-center mr-4">
+                                <i class="icon-code text-blue-600 dark:text-blue-400 text-xl" aria-hidden="true"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-800 dark:text-gray-200">Frontend</h3>
+                        </div>
+                        
+                        <div class="space-y-4">
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-gray-800 dark:text-gray-300 font-medium">HTML5 & CSS3</span>
+                                    <span class="text-gray-600 dark:text-gray-400">90%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+                                    <div class="bg-blue-600 h-2 rounded-full progress-bar"
+                                        style="width: 90%" role="progressbar"                                                                                   
+                                        aria-label="HTML5 y CSS3: 90% de dominio"                                          
+                                        aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">                                                                              
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-gray-800 dark:text-gray-300 font-medium">JavaScript</span>
+                                    <span class="text-gray-600 dark:text-gray-400">85%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">                                    
+                                    <div class="bg-blue-600 h-2 rounded-full progress-bar"                                         
+                                        style="width: 85%" role="progressbar"                                        
+                                        aria-label="JavaScript: 85% de dominio"  
+                                        aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-gray-800 dark:text-gray-300 font-medium">React</span>
+                                    <span class="text-gray-600 dark:text-gray-400">80%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">                                    
+                                    <div class="bg-blue-600 h-2 rounded-full progress-bar"                                         
+                                        style="width: 80%" role="progressbar"                                        
+                                        aria-label="React: 80% de dominio"
+                                        aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">                                                                             
+                                    </div>                                    
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-gray-800 dark:text-gray-300 font-medium">Tailwind CSS</span>
+                                    <span class="text-gray-600 dark:text-gray-400">70%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">                                    
+                                    <div class="bg-blue-600 h-2 rounded-full progress-bar"                                         
+                                        style="width: 70%" role="progressbar"                                        
+                                        aria-label="Tailwind CSS: 70% de dominio"
+                                        aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">                                                                              
+                                    </div>                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Habilidades de Backend -->
+                    <div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-md">
+                        <div class="flex items-center mb-6">
+                            <div class="w-12 h-12 rounded-lg bg-green-100 dark:bg-green-900 flex items-center justify-center mr-4">
+                                <i class="icon-server text-green-600 dark:text-green-400 text-xl" aria-hidden="true"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-800 dark:text-gray-200">Backend</h3>
+                        </div>
+                        
+                        <div class="space-y-4">
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-gray-800 dark:text-gray-300 font-medium">Python</span>
+                                    <span class="text-gray-600 dark:text-gray-400">75%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">                                      
+                                    <div class="bg-green-600 h-2 rounded-full progress-bar"                                           
+                                        style="width: 75%" role="progressbar"                                        
+                                        aria-label="Python: 75% de dominio"
+                                        aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">                                                                              
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-gray-800 dark:text-gray-300 font-medium">Flask</span>
+                                    <span class="text-gray-600 dark:text-gray-400">65%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">                                      
+                                    <div class="bg-green-600 h-2 rounded-full progress-bar"                                           
+                                        style="width: 65%" role="progressbar"                                        
+                                        aria-label="Flask: 65% de dominio"
+                                        aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">                                                                                  
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-gray-800 dark:text-gray-300 font-medium">PHP</span>
+                                    <span class="text-gray-600 dark:text-gray-400">60%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">                                      
+                                    <div class="bg-green-600 h-2 rounded-full progress-bar"                                           
+                                        style="width: 60%" role="progressbar"                                        
+                                        aria-label="PHP: 60% de dominio"
+                                        aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">                                                                             
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-gray-800 dark:text-gray-300 font-medium">MySQL</span>
+                                    <span class="text-gray-600 dark:text-gray-400">70%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">                                      
+                                    <div class="bg-green-600 h-2 rounded-full progress-bar"                                           
+                                        style="width: 70%" role="progressbar"
+                                        aria-label="MySQL: 70% de dominio"
+                                        aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">                                                                              
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Otras tecnologías -->
+                <div class="mt-12">
+                    <h3 class="text-xl font-semibold text-center mb-8 text-gray-800 dark:text-gray-200">Otras Tecnologías y Herramientas</h3>
+                    <div class="flex flex-wrap justify-center gap-3">
+                        <div class="bg-white dark:bg-gray-800 px-4 py-2 rounded-lg shadow-sm flex items-center">
+                            <i class="icon-git-squared text-orange-500 mr-2" aria-hidden="true"></i>
+                            <span class="text-gray-800 dark:text-gray-300 font-medium">Git</span>
+                        </div>
+                        <div class="bg-white dark:bg-gray-800 px-4 py-2 rounded-lg shadow-sm flex items-center">
+                            <i class="icon-github-squared text-gray-800 dark:text-gray-300 mr-2" aria-hidden="true"></i>
+                            <span class="text-gray-800 dark:text-gray-300 font-medium">GitHub</span>
+                        </div>
+                        <div class="bg-white dark:bg-gray-800 px-4 py-2 rounded-lg shadow-sm flex items-center">
+                            <i class="icon-amazon text-orange-400 mr-2" aria-hidden="true"></i>
+                            <span class="text-gray-800 dark:text-gray-300 font-medium">AWS</span>
+                        </div>                          
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Proyectos Section -->
+        <section id="proyectos" class="py-16 bg-white dark:bg-gray-800" aria-labelledby="proyectos-title">
+            <div class="container mx-auto px-4">
+                <h2 id="proyectos-title" class="text-3xl md:text-4xl font-bold text-center mb-12 text-primary-700 dark:text-primary-400">Proyectos Destacados</h2>
+                
+                <!-- Carrusel de Proyectos -->
+                <div class="relative" aria-label="Carrusel de proyectos">
+                    <!-- Contenedor del carrusel -->
+                    <div id="projects-carousel" class="overflow-hidden py-2">
+                        <div id="projects-track" class="flex transition-transform duration-500 ease-out">
+                            <!-- Proyecto 1 -->
+                            <div class="carousel-slide flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-4">
+                                <article class="bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg border border-gray-100 dark:border-gray-600 h-full flex flex-col"
+                                    role="article" aria-label="Proyecto Infojis - Sistema de gestión académica">
+                                    <div class="h-48 bg-gradient-to-r from-blue-400 to-purple-500 relative" aria-hidden="true">
+                                        <div class="absolute inset-0 bg-black/20 flex items-center justify-center">
+                                            <i class="icon-graduation-cap text-white text-4xl" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                    <div class="p-6 flex-grow">
+                                        <h3 class="text-xl font-semibold mb-2 text-gray-800 dark:text-gray-200">Infojis</h3>
+                                        <p class="text-gray-700 dark:text-gray-300 mb-4">Sistema de gestión académica diseñado para optimizar los procesos administrativos y académicos de las instituciones educativas.</p>
+                                        <div class="flex flex-wrap gap-2 mb-4">
+                                            <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs px-2 py-1 rounded">Flask</span>
+                                            <span class="bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 text-xs px-2 py-1 rounded">HTML5</span>
+                                            <span class="bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200 text-xs px-2 py-1 rounded">MySQL</span>
+                                        </div>
+                                        <div class="flex space-x-4 mt-auto">
+                                            <a href="#" 
+                                               class="text-primary-600 dark:text-primary-400 hover:text-primary-800 dark:hover:text-primary-300 font-medium flex items-center focus:outline-none focus:underline"
+                                               aria-label="Ver demo de Infojis">
+                                                <i class="icon-link-ext mr-1" aria-hidden="true"></i>
+                                                <span>Demo</span>
+                                            </a>
+                                            <a href="https://github.com/JhonatanMazo/infojis.git" 
+                                               class="text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-300 font-medium flex items-center focus:outline-none focus:underline"
+                                               aria-label="Ver código de Infojis en GitHub">
+                                                <i class="icon-github-squared mr-1" aria-hidden="true"></i>
+                                                <span>Código</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                            
+                            <!-- Proyecto 2 -->
+                            <div class="carousel-slide flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-4">
+                                <article class="bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg border border-gray-100 dark:border-gray-600 h-full flex flex-col"
+                                    role="article" aria-label="Proyecto Clon Netflix - Clon de Netflix con consumo de api">
+                                    <div class="h-48 bg-gradient-to-r from-green-400 to-blue-500 relative" aria-hidden="true">
+                                        <div class="absolute inset-0 bg-black/20 flex items-center justify-center">
+                                            <strong class="text-white text-4xl" aria-hidden="true">N</strong>
+                                        </div>
+                                    </div>
+                                    <div class="p-6 flex-grow">
+                                        <h3 class="text-xl font-semibold mb-2 text-gray-800 dark:text-gray-200">Clon de Netflix</h3>
+                                        <p class="text-gray-700 dark:text-gray-300 mb-4">Réplica funcional de Netflix con interfaz moderna y características avanzadas. Incluye sliders interactivos y diseño responsive.</p>
+                                        <div class="flex flex-wrap gap-2 mb-4">
+                                            <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs px-2 py-1 rounded">Flask</span>
+                                            <span class="bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 text-xs px-2 py-1 rounded">HTML5</span>
+                                            <span class="bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200 text-xs px-2 py-1 rounded">API</span>
+                                        </div>
+                                        <div class="flex space-x-4 mt-auto">
+                                            <a href="https://aldairs-ai.github.io/NetClon/" 
+                                               class="text-primary-600 dark:text-primary-400 hover:text-primary-800 dark:hover:text-primary-300 font-medium flex items-center focus:outline-none focus:underline"
+                                               aria-label="Ver demo del Clon de Netflix">
+                                                <i class="icon-link-ext mr-1" aria-hidden="true"></i>
+                                                <span>Demo</span>
+                                            </a>
+                                            <a href="https://github.com/AldairS-ai/NetClon.git" 
+                                               class="text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-300 font-medium flex items-center focus:outline-none focus:underline"
+                                               aria-label="Ver código del Clon de Netflix en GitHub">
+                                                <i class="icon-github-squared mr-1" aria-hidden="true"></i>
+                                                <span>Código</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                            
+                            <!-- Proyecto 3 -->
+                            <div class="carousel-slide flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-4">
+                                <article class="bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg border border-gray-100 dark:border-gray-600 h-full flex flex-col"
+                                    role="article" aria-label="Proyecto Dashboard Administrativo - Sistema de administración web con gestión completa de usuarios">
+                                    <div class="h-48 bg-gradient-to-r from-purple-400 to-pink-500 relative" aria-hidden="true">
+                                        <div class="absolute inset-0 bg-black/20 flex items-center justify-center">
+                                            <i class="icon-gauge text-white text-4xl" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                    <div class="p-6 flex-grow">
+                                        <h3 class="text-xl font-semibold mb-2 text-gray-800 dark:text-gray-200">Dashboard Administrativo</h3>
+                                        <p class="text-gray-700 dark:text-gray-300 mb-4">Sistema de administración web con gestión completa de usuarios, dashboard analítico e interfaz moderna.</p>
+                                        <div class="flex flex-wrap gap-2 mb-4">
+                                            <span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs px-2 py-1 rounded">HTML5</span>
+                                            <span class="bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 text-xs px-2 py-1 rounded">Bootstrap</span>
+                                            <span class="bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200 text-xs px-2 py-1 rounded">JavaScript</span>
+                                        </div>
+                                        <div class="flex space-x-4 mt-auto">
+                                            <a href="https://aldairs-ai.github.io/dashboardAdministrativo-/" 
+                                               class="text-primary-600 dark:text-primary-400 hover:text-primary-800 dark:hover:text-primary-300 font-medium flex items-center focus:outline-none focus:underline"
+                                               aria-label="Ver demo del Dashboard Administrativo">
+                                                <i class="icon-link-ext mr-1" aria-hidden="true"></i>
+                                                <span>Demo</span>
+                                            </a>
+                                            <a href="https://github.com/AldairS-ai/dashboardAdministrativo-.git" 
+                                               class="text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-300 font-medium flex items-center focus:outline-none focus:underline"
+                                               aria-label="Ver código del Dashboard Administrativo en GitHub">
+                                                <i class="icon-github-squared mr-1" aria-hidden="true"></i>
+                                                <span>Código</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Controles del carrusel -->
+                    <button id="carousel-prev"                           
+                        class="carousel-control absolute left-0 top-1/2 transform -translate-y-1/2 bg-white dark:bg-gray-800 shadow-lg rounded-full w-10 h-10 flex items-center justify-center text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-all duration-300 z-10 focus:outline-none focus:ring-2 focus:ring-primary-500 min-h-[40px] min-w-[40px]"                          
+                        aria-label="Proyecto anterior" aria-controls="projects-track" aria-keyshortcuts="ArrowLeft">                          
+                        <i class="icon-left-open" aria-hidden="true"></i>                          
+                    </button>
+                    <button id="carousel-next"                           
+                        class="carousel-control absolute right-0 top-1/2 transform -translate-y-1/2 bg-white dark:bg-gray-800 shadow-lg rounded-full w-10 h-10 flex items-center justify-center text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-all duration-300 z-10 focus:outline-none focus:ring-2 focus:ring-primary-500 min-h-[40px] min-w-[40px]"                          
+                        aria-label="Siguiente proyecto" aria-controls="projects-track" aria-keyshortcuts="ArrowRight">                          
+                        <i class="icon-right-open" aria-hidden="true"></i>                          
+                    </button>
+                    
+                    <!-- Indicadores del carrusel -->
+                    <div id="carousel-indicators" class="flex justify-center mt-6 space-x-2" role="tablist" aria-label="Indicadores de proyectos">
+                        <!-- Los indicadores se generan dinámicamente -->
+                    </div>
+                </div>
+                
+                <div class="text-center mt-12">
+                    <a href="https://github.com/AldairS-ai" 
+                       class="inline-flex items-center text-primary-600 dark:text-primary-400 hover:text-primary-800 dark:hover:text-primary-300 font-medium focus:outline-none focus:underline min-h-[44px]"
+                       aria-label="Ver todos los proyectos en GitHub">
+                        <span>Ver todos los proyectos</span>
+                        <i class="icon-right-big ml-2" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contacto Section -->
+        <section id="contacto" class="py-16 bg-gray-50 dark:bg-gray-900" aria-labelledby="contacto-title">
+            <div class="container mx-auto px-4">
+                <h2 id="contacto-title" class="text-3xl md:text-4xl font-bold text-center mb-12 text-primary-700 dark:text-primary-400">Contacto</h2>
+                <p class="text-lg text-center text-gray-700 dark:text-gray-300 mb-8 max-w-2xl mx-auto">¿Tienes un proyecto en mente? ¡Hablemos y hagámoslo realidad!</p>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <!-- Formulario de contacto -->
+                    <div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-md">
+                        <h3 class="text-xl font-bold text-gray-800 dark:text-gray-200 mb-6">Envíame un Mensaje</h3>
+                        <form id="contact-form" class="space-y-6" action="https://formspree.io/f/xyzlkkwd" method="POST" aria-label="Formulario de contacto">
+                            <div>
+                                <label for="nombre" class="block text-gray-800 dark:text-gray-300 mb-2 font-medium">Nombre completo</label>
+                                <input type="text" id="nombre" name="nombre" required                                                                         
+                                    class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-200 transition-colors duration-200"                                    
+                                    placeholder="Tu nombre" aria-required="true">                                    
+                            </div>
+                            
+                            <div>
+                                <label for="email" class="block text-gray-800 dark:text-gray-300 mb-2 font-medium">Email</label>
+                                <input type="email" id="email" name="email" required                                                                        
+                                    class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-200 transition-colors duration-200"                                    
+                                    placeholder="tu@email.com" aria-required="true">                                                                
+                            </div>
+                            
+                            <div>
+                                <label for="asunto" class="block text-gray-800 dark:text-gray-300 mb-2 font-medium">Asunto</label>
+                                <input type="text" id="asunto" name="asunto" required                                                                                                            
+                                    class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-200 transition-colors duration-200"                                    
+                                    placeholder="Asunto del mensaje" aria-required="true">                                    
+                            </div>
+                            
+                            <div>
+                                <label for="mensaje" class="block text-gray-800 dark:text-gray-300 mb-2 font-medium">Mensaje</label>
+                                <textarea id="mensaje" name="mensaje" rows="5" required                                    
+                                    class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-200 transition-colors duration-200 resize-none"                                    
+                                    placeholder="Escribe tu mensaje aquí..."
+                                    aria-required="true"></textarea>
+                            </div>
+                            
+                            <button type="submit" id="submit-btn"                                
+                                    class="w-full bg-primary-600 hover:bg-primary-700 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 min-h-[44px] flex items-center justify-center"
+                                    aria-label="Enviar mensaje">
+                                <span id="submit-text">Enviar Mensaje</span>
+                                <span id="submit-spinner" class="hidden ml-2" aria-hidden="true">
+                                    <i class="fas fa-spinner fa-spin"></i>
+                                </span>
+                            </button>
+                        </form>
+                    </div>
+                    
+                    <!-- Información de contacto -->
+                    <div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-md mt-2">
+                        <h3 class="text-xl font-bold text-gray-800 dark:text-gray-200 mb-6">Información de Contacto</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="bg-primary-100 dark:bg-primary-900 p-3 rounded-lg mr-4 flex-shrink-0">
+                                    <i class="icon-mail text-primary-600 dark:text-primary-400" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800 dark:text-gray-200 mb-1">Email</h4>
+                                    <a href="mailto:aldairsarmiento157@gmail.com" class="text-primary-600 dark:text-primary-400 hover:underline">aldairsarmiento157@gmail.com</a>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-primary-100 dark:bg-primary-900 p-3 rounded-lg mr-4 flex-shrink-0">
+                                    <i class="icon-whatsapp text-primary-600 dark:text-primary-400" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800 dark:text-gray-200 mb-1">WhatsApp</h4>
+                                    <a href="https://wa.me/573118506905" class="text-primary-600 dark:text-primary-400 hover:underline">+57 311 850 6905</a>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-primary-100 dark:bg-primary-900 p-3 rounded-lg mr-4 flex-shrink-0">
+                                    <i class="icon-github-squared text-primary-600 dark:text-primary-400" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800 dark:text-gray-200 mb-1">GitHub</h4>
+                                    <a href="https://github.com/AldairS-ai" class="text-primary-600 dark:text-primary-400 hover:underline">github.com/AldairS-ai</a>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-primary-100 dark:bg-primary-900 p-3 rounded-lg mr-4 flex-shrink-0">
+                                    <i class="icon-location text-primary-600 dark:text-primary-400" aria-hidden="true"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800 dark:text-gray-200 mb-1">Ubicación</h4>
+                                    <p class="text-gray-700 dark:text-gray-300">Valledupar, Colombia</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Redes sociales -->
+                        <div class="mt-8 pt-6 border-t border-gray-200 dark:border-gray-700">
+                            <h4 class="font-semibold text-gray-800 dark:text-gray-200 mb-4">Sígueme en redes</h4>
+                            <div class="flex space-x-4">
+                                <a href="https://linkedin.com/in/aldairsarmiento"                                       
+                                   class="w-12 h-12 bg-gray-100 dark:bg-gray-700 rounded-full flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-primary-600 hover:text-white transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-primary-500"                                      
+                                   aria-label="Perfil de LinkedIn de Aldair Sarmiento">                                      
+                                   <i class="icon-linkedin-squared" aria-hidden="true"></i>                                      
+                                   <span class="sr-only">LinkedIn</span>                                      
+                                </a>
+                                <a href="https://github.com/AldairS-ai"                                       
+                                   class="w-12 h-12 bg-gray-100 dark:bg-gray-700 rounded-full flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-primary-600 hover:text-white transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-primary-500"                                      
+                                   aria-label="Repositorios de GitHub de Aldair Sarmiento">                                      
+                                   <i class="icon-github-squared" aria-hidden="true"></i>                                      
+                                   <span class="sr-only">GitHub</span>                                      
+                                </a>
+                                <a href="https://wa.me/573118506905" 
+                                   class="w-12 h-12 bg-gray-100 dark:bg-gray-700 rounded-full flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-green-600 hover:text-white transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-green-500"
+                                   aria-label="WhatsApp de Aldair">
+                                    <i class="icon-whatsapp" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8" role="contentinfo">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="text-center md:text-left">
+                    <div class="flex items-center justify-center md:justify-start space-x-2 mb-2">                      
+                        <div class="w-8 h-8 rounded-full bg-primary-600 flex items-center justify-center transition-transform duration-300 hover:scale-110 focus:scale-110" aria-hidden="true">                          
+                          <i class="icon-code text-white" aria-hidden="true"></i>                                            
+                        </div>
+                        <span class="text-xl font-bold text-primary-400 dark:text-primary-400">Aldair Dev</span>
+                    </div>
+                    <p class="text-gray-400">Desarrollador Frontend</p>
+                </div>
+                
+                <div class="flex space-x-6">
+                    <a href="https://linkedin.com/in/aldairsarmiento" 
+                       class="text-gray-400 hover:text-white transition-colors duration-300 focus:outline-none focus:text-white"
+                       aria-label="LinkedIn">
+                        <i class="icon-linkedin-squared text-xl" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://github.com/AldairS-ai" 
+                       class="text-gray-400 hover:text-white transition-colors duration-300 focus:outline-none focus:text-white"
+                       aria-label="GitHub">
+                        <i class="icon-github-squared text-xl" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://wa.me/573118506905" 
+                       class="text-gray-400 hover:text-white transition-colors duration-300 focus:outline-none focus:text-white"
+                       aria-label="WhatsApp">
+                        <i class="icon-whatsapp text-xl" aria-hidden="true"></i>
+                    </a>
+                    <a href="mailto:aldairsarmiento157@gmail.com" 
+                       class="text-gray-400 hover:text-white transition-colors duration-300 focus:outline-none focus:text-white"
+                       aria-label="Email">
+                        <i class="icon-mail text-xl" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-6 text-center text-gray-400">
+                <p>&copy; <span id="current-year"></span> Aldair Dev. Todos los derechos reservados.</p>                
+            </div>
+        </div>
+    </footer>
+        
+    <a href="https://wa.me/573118506905" class="btn-whatsapp" target="_blank"
+        rel="noopener noreferrer" aria-label="Chatear por WhatsApp">        
+        <i class="icon-whatsapp"></i>
+    </a>
+    
+    
+    <!-- Al final del body, REEMPLAZA las líneas de scripts con: -->
+
+<script src="src/scripts/main.js"></script>
+<script src="src/scripts/carousel.js" defer></script>
+<script src="src/scripts/form.js" defer></script>
+
+<!-- Legacy para navegadores sin soporte moderno -->
+<script nomodule src="src/scripts/app.js"></script>    
+    <!--<script>
+if ('serviceWorker' in navigator) {        
+    window.addEventListener('load', function() {            
+        navigator.serviceWorker.register('./service-worker.js').then(
+        function(registration) {                
+            console.log('ServiceWorker registrado con éxito:', registration.scope);                
+        },
+        function(err) {
+            console.log('ServiceWorker registro fallido:', err);                
+        });
+    });
+}
+</script>-->
